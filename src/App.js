@@ -1,24 +1,50 @@
 import logo from './logo.svg';
 import './App.css';
+import BoxView from './components/BoxView';
+
+
+const data = [
+  
+  {
+    heading:'test heading 1',
+    icon:'AccessAlarms',
+    list:[{text: "text1",amount:"1"},{text: "text2",amount:"2"},{text: "text3",amount:"3"}]
+  },
+  {
+    heading:'test heading 2',
+    icon:'AccessAlarms',
+    list:[{text: "text1",amount:"1"},{text: "text2",amount:"2"},{text: "text3",amount:"3"}]
+  },
+  {
+    heading:'test heading 3',
+    icon:'AccessAlarms',
+    list:[{text: "text1",amount:"1"},{text: "text2",amount:"2"},{text: "text3",amount:"3"}]
+  },
+  {
+    heading:'test heading 4',
+    icon:'AccessAlarms',
+    list:[{text: "text1",amount:"1"},{text: "text2",amount:"2"},{text: "text3",amount:"3"}]
+  },
+  {
+    heading:'test heading 5',
+    icon:'AccessAlarms',
+    list:[{text: "text1",amount:"1"},{text: "text2",amount:"2"},{text: "text3",amount:"3"}]
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div style={{display:"flex", background:"lightblue"}}>
+    {/* {
+    data.map(item=>{
+      return <BoxView  title={item.heading} icon={item.icon} list={item.list} />
+    })
+    } */}
+
+<BoxView data={data} />
+
+</div>
+    
   );
 }
 
